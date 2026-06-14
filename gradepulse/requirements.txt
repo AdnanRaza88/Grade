@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlmodel
+pandas
+openpyxl
+fpdf2
+nicegui
+langchain-groq
+langchain
