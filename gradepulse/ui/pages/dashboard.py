@@ -1,4 +1,4 @@
-from nicegui import ui, run_javascript
+from nicegui import ui
 from ui.style import inject
 
 def render():
@@ -39,7 +39,7 @@ def render():
         ui.button('Refresh', on_click=lambda: fetch(table)).classes('neu-btn')
 
 def fetch(table):
-    run_javascript(f'''
+    ui.run_javascript(f'''
         fetch("/api/grades/")
           .then(r => r.json())
           .then(data => {{
