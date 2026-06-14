@@ -16,7 +16,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 init_db()
 
-from ui.pages import dashboard, upload, config, results, ai, notebooklm
+from ui.pages import dashboard, upload_page, config_page, results_page, ai_page, notebooklm_page
 
 @ui.page('/')
 def serve_dashboard():
@@ -24,22 +24,22 @@ def serve_dashboard():
 
 @ui.page('/upload')
 def serve_upload():
-    upload.render()
+    upload_page.render()
 
 @ui.page('/config')
 def serve_config():
-    config.render()
+    config_page.render()
 
 @ui.page('/results')
 def serve_results():
-    results.render()
+    results_page.render()
 
 @ui.page('/ai')
 def serve_ai():
-    ai.render()
+    ai_page.render()
 
 @ui.page('/notebooklm')
 def serve_notebooklm():
-    notebooklm.render()
+    notebooklm_page.render()
 
 nicegui_app.mount(app, '/api')
