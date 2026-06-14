@@ -9,4 +9,5 @@ python-multipart
 nicegui
 langchain
 langchain-groq
+langchain-core
 aiofiles

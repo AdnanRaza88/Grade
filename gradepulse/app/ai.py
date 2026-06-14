@@ -1,6 +1,6 @@
 import os
 from langchain_groq import ChatGroq
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "your-key")
 llm = ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=GROQ_API_KEY)
